@@ -1,58 +1,105 @@
-Project Board
+🧾 Bookstore System – Test Plan
+1. Introduction
 
-Platform: GitHub Projects 
+This Test Plan describes the testing strategy, scope, objectives, schedule, and deliverables for the Bookstore Management System.
+The system allows users to browse, search, and purchase books online while enabling admins to manage inventory, orders, and customer information.
+2. Objectives
+- Verify that users can search, view, and purchase books successfully.
+- Ensure admin functions (add, edit, delete books) work correctly.
+- Validate input fields and error handling for all user interactions.
+- Confirm that the payment, cart, and order processes function end-to-end.
+_ Identify and log any defects affecting usability, functionality, or data integrity.
 
-Project Link: [Add your GitHub Project or Jira Board URL here]
+3. Scope
+✅ In Scope
+- User registration and login
+- Book search and filtering
+- Shopping cart operations (add/remove/update)
+- Checkout and order confirmation
+- Admin book management
+- UI validation (buttons, forms, messages)
 
-Columns:
+🚫 Out of Scope
+- Payment gateway integration testing (external API)
+- Performance and load testing
+- Multi-browser compatibility testing
+- Mobile responsiveness
 
-🟡 To Do – New tasks or defects awaiting assignment
+4. Test Approach
+- Testing will use Black-Box Testing techniques:
+- Equivalence Partitioning (EP) – to test valid/invalid inputs (e.g., price, quantity).
+- Boundary Value Analysis (BVA) – to verify limits (e.g., 0 or max quantity).
+- Decision Table Testing (DTT) – for discount or offer logic.
+- State Transition Testing (STT) – to verify cart and order status changes.
 
-🔵 In Progress – Currently being worked on
+Testing will be manual, executed on Chrome browser in a local environment.
 
-🟢 Completed – Reviewed and merged items
+5. Test Environment
 
-Each issue is tagged by category (test-case, bug, enhancement) and assigned to a team member.
+| Component | Description                        |
+| --------- | ---------------------------------- |
+| OS        | Windows 10 / 11                    |
+| Browser   | Google Chrome (latest)             |
+| Tools     | GitHub, Excel (test data), VS Code |
+| Backend   | Node.js / Express (if applicable)  |
+| Database  | MySQL / MongoDB (sample data set)  |
 
-Updates and progress tracked daily.
+6. Test Deliverables
+- Test Plan (this document)
+- Test Cases and Test Data Sheet
+- Defect Report Log
+- Test Summary Report
 
-est Plan Document
+7. Schedule
 
-File: tests/test-plan.md
-Includes:
+| Phase                    | Planned Duration | Actual Duration | Status |
+| ------------------------ | ---------------- | --------------- | ------ |
+| Test Planning            | 1 Day            |                 |        |
+| Test Design (Test Cases) | 2 Days           |                 |        |
+| Test Execution           | 3 Days           |                 |        |
+| Defect Reporting         | Ongoing          |                 |        |
+| Test Closure             | 1 Day            |                 |        |
 
-Objectives
+8. Roles & Responsibilities
 
-Scope (In / Out of Scope)
+| Role             | Responsibilities                                |
+| ---------------- | ----------------------------------------------- |
+| **Test Manager** | Prepare test plan, track progress, assign tasks |
+| **Test Analyst** | Design and execute test cases                   |
+| **Tester**       | Perform testing, report and retest defects      |
+| **Developer**    | Fix defects and support retesting               |
 
-Test Deliverables
+9. Entry & Exit Criteria
 
-Roles and Responsibilities
+Entry Criteria
+- Application build is deployed successfully.
+- Test environment is ready.
+- Test cases are reviewed and approved.
 
-Risk Analysis
+Exit Criteria
+- All critical test cases executed and passed.
+- All major defects fixed or deferred with approval.
+- Test Summary Report submitted.
 
-Test Schedule and Deliverables
+10. Risks & Mitigation
 
-Defect Management Approach
+| Risk ID | Description                         | Likelihood | Impact | Mitigation                |
+| ------- | ----------------------------------- | ---------- | ------ | ------------------------- |
+| R1      | Server not available during testing | Medium     | High   | Coordinate with DevOps    |
+| R2      | Delay in test data setup            | Medium     | Medium | Use mock data             |
+| R3      | Defects found late in cycle         | High       | High   | Perform early smoke tests |
 
-Team Roles & Responsibilities
-| **Role**          | **Member**      | **Responsibilities**                                                                |
-| ----------------- | --------------- | ----------------------------------------------------------------------------------- |
-| **Test Manager**  | Denis Kyalo     | Draft test plan, define objectives, manage test schedule, track progress            |
-| **Risk Analyst**  | Bramwel Mutugi | Identify, assess, and monitor risks; ensure test coverage for high-risk areas       |
-| **Test Executor** | Gideon Bethuel | Perform manual testing, log defects, verify fixes, and assist in regression testing |
+11. Test Metrics
 
+| Metric           | Description                     |
+| ---------------- | ------------------------------- |
+| Test Case Pass % | (Passed / Total Executed) × 100 |
+| Defect Density   | Defects per module size         |
+| Fix Rate         | % of resolved defects           |
+| Risk Coverage    | % of tested risks               |
 
-Communication Plan
-Primary Channel: GitHub Issues & Comments
+12. Test Summary (Post Execution)
 
-Secondary Channel: WhatsApp Group / Email (for quick updates)
-
-Meeting Schedule:
-Daily 10-minute stand-up for progress updates
-
-End-of-week sync to review test coverage and open defects
-
-Documentation Updates:
-All test progress logged in GitHub Project Board
-Reports stored under /tests/ folder
+Testing confirmed that major bookstore functionalities like search, add to cart, and checkout perform correctly.
+Minor usability issues were identified in form validation and error messages.
+All high-priority defects were resolved, and the system is ready for deployment.
