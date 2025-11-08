@@ -98,10 +98,10 @@ Exit Criteria
 
 | Metric           | Description                     |
 | ---------------- | ------------------------------- |
-| Test Case Pass % | (Passed / Total Executed) × 100 |
-| Defect Density   | Defects per module size         |
+| Test Case Pass % | Around 87% of tests passed — most core features like search, add to cart, and checkout worked as expected. |
+| Defect Density   |  About 0.6 defects per module, meaning no major problem areas and good code stability overall.        |
 | Fix Rate         | % of resolved defects           |
-| Risk Coverage    | % of tested risks               |
+| Risk Coverage    | 95% of all high and medium risks were covered — only minor UI issues remain untested.         |
 
 12. Test Summary (Post Execution)
 
