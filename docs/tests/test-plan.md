@@ -105,6 +105,14 @@ Exit Criteria
 
 12. Test Summary (Post Execution)
 
-Testing confirmed that major bookstore functionalities like search, add to cart, and checkout perform correctly.
+Testing of the Book Store Web Application confirmed that major functionalities such as:
+
+Browsing and searching books
+
+Adding items to the cart
+
+Performing checkout and payments via Paystack
+
+all work correctly and consistently across browsers.
 Minor usability issues were identified in form validation and error messages.
 All high-priority defects were resolved, and the system is ready for deployment.
